@@ -1,0 +1,161 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "",
+  "resourcePath": "authors",
+  "apis": [
+    {
+      "path": "/authors.json",
+      "operations": [
+        {
+          "summary": "Fetches all Authors",
+          "notes": "This lists all the authors",
+          "nickname": "Authors#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/authors.json",
+      "operations": [
+        {
+          "summary": "Creates a new Author",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "first_name",
+              "type": "string",
+              "description": "First name",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "last_name",
+              "type": "string",
+              "description": "Last name",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Authors#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/authors/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one Author",
+          "notes": "This lists details of one author",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Author ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Authors#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/authors/{id}.json",
+      "operations": [
+        {
+          "summary": "Updates an existing Author",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Author Id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "first_name",
+              "type": "string",
+              "description": "First name",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "last_name",
+              "type": "string",
+              "description": "Last name",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Authors#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/authors/{id}.json",
+      "operations": [
+        {
+          "summary": "Deletes an existing Author",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Author Id",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Authors#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

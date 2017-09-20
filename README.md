@@ -108,7 +108,7 @@ Swagger::Docs::Config.register_apis({
 })
 ```
 
-#### Document your API
+#### Document your API controllers
 
 Look at the swagger-docs gem documentaiton for the full details of how to set up documentation. Each controller needs to include some information as to what the API endpoints that exists for the controller itself, since only controllers can define the endpoint action. In this case we are going to quickly go over what it would be like to document the authors controller with the general CRUD operations.
 
@@ -178,4 +178,11 @@ This is the bulk of how you can document your API and tell users how to use your
 ```
 $ rake swagger:docs
 ```
+Now check in your ```public/apidocs``` folder, there should be a main json file called ```api-docs.json``` and then a json file for each controller, in this case there would just be ```authors.json```. You can take a look a these files just to get familiar with what is going on. 
+
+
+### Get Swagger UI
+
+Now your next step is to get swagger ui to display the JSON in a user friendly manner!
+
 
