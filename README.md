@@ -202,3 +202,5 @@ You should now have a folder under public/api/ where all of swagger ui files (ht
 Start up your server using rails s and then go to http://localhost:3000/api and you should see something like this:
 
 ![](https://github.com/495-Labs-Projects/RailsSwaggerExample/blob/master/public/swagger-sreenshot.png "Swagger UI Screenshot")
+
+Now you can interact with your API through the swagger docs very easily by filling out the params for each API endpoint and clicking ```Try it out!```.
