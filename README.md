@@ -93,8 +93,8 @@ Swagger::Docs::Config.register_apis({
     :api_extension_type => :json,
     # the output location where your .json files are written to
     :api_file_path => "public/apidocs",
-    # the URL base path to your API
-    :base_path => "",
+    # the URL base path to your API (make sure to change this if you are not using localhost:3000)
+    :base_path => "http://localhost:3000",
     # if you want to delete all .json files at each generation
     :clean_directory => false,
     # add custom attributes to api-docs
@@ -184,5 +184,19 @@ Now check in your ```public/apidocs``` folder, there should be a main json file 
 ### Get Swagger UI
 
 Now your next step is to get swagger ui to display the JSON in a user friendly manner!
+
+Change you directory to the public folder:
+
+```
+$ cd public/
+```
+
+Then you want to include the Swagger UI in the public folder as a git submodule under the folder name api/:
+
+```
+$ git submodule add https://github.com/495-Labs-Projects/RailsSwaggerUI api
+```
+
+Start up your server using rails s and then go to http://localhost:3000/api and you should see something like this:
 
 
