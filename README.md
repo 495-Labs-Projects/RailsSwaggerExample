@@ -197,6 +197,8 @@ Then you want to include the Swagger UI in the public folder as a git submodule 
 $ git submodule add https://github.com/495-Labs-Projects/RailsSwaggerUI api
 ```
 
+You should now have a folder under public/api/ where all of swagger ui files (html, css, javascript) will be.
+
 Start up your server using rails s and then go to http://localhost:3000/api and you should see something like this:
 
-
+![](https://github.com/495-Labs-Projects/RailsSwaggerExample/blob/master/public/swagger-sreenshot.png "Swagger UI Screenshot")
